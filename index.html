@@ -7,204 +7,220 @@
 
        </style>
 
+      <!--------------------------------------------------------------->      
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+
+    const track = document.querySelector('.carousel-track');
+    const images = document.querySelectorAll('.carousel-img');
+    const nextButton = document.querySelector('.next');
+    const prevButton = document.querySelector('.prev');
+
+    let index = 0;
+
+    function updateCarousel() {
+        track.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    nextButton.addEventListener('click', () => {
+        index++;
+        if (index >= images.length) index = 0;
+        updateCarousel();
+    });
+
+    prevButton.addEventListener('click', () => {
+        index--;
+        if (index < 0) index = images.length - 1;
+        updateCarousel();
+    });
+
+});
+</script>
+
+      <!--------------------------------------------------------------->      
+
 
         <body>
            <video autoplay muted loop id="bg-video">
-  <source src="large.mp4" type="video/mp4">
+  <source src="MATRIZ.mp4" type="video/mp4">
  </video>
 
-            
-            <header>
-                
+      <!--------------------------------------------------------------->      
+
+<header class="top-menu">
   <nav>
+    
     <ul>
       <li><a href="#Bienvenidos">Bienvenidos</a></li>
-      <li><a href="#perfil Profesional">Perfil Profesional</a></li>
-      <li><a href="#Experiencia Laboral">Experiencia Laboral</a></li>
-      <li><a href="#FormaciónAcadémica"> Formación Académica</a></li>
-       <li><a href="#Proyectos">Proyectos</a></li>
-        <li><a href="#Redes">Redes</a></li>
-        <li><a href="#contactame">Contacto</a></li>
+      <li><a href="#Perfil">Perfil Profesional</a></li>
+      <li><a href="#Experiencia">Experiencia</a></li>
+      <li><a href="#Formacion">Formación</a></li>
+      <li><a href="#Proyectos">Proyectos</a></li>
+      <li><a href="#Redes">Redes</a></li>
+      <li><a href="#Contacto">Contacto</a></li>
     </ul>
   </nav>
-  
 </header>
-<p><h1 style="color:white;font-size: 25px;"> Portfolio Joel Roman Urbanski</h1></p>
-          
-                <table>
-                    <section class="uno">
-                        <div class="caja-central">
+<!--------------------------------------------------------------->
+                 <section id="Bienvenidos" class="bienvenida-card">
+                        <img src="joelfoto.jpg" class="foto-perfil">
+    
+                        <div class="texto-bienvenida">
+                    <h1>Bienvenidos a mi PortFolio 🚀</h1>
+                    <p>Me llamo Joel Roman Urbanski</p>
+                    <p>Soy Técnico en Informática</p>
+                    <p>Futuro Técnico Programador</p>
+                </div>
+            </section>
 
-                              
-                                  
-                              
-                            <div class="caja-cara">
-                                <img class="cara"  width="160ppx" height="200" src="joelfoto.jpg"alt="perfil facebook" > 
-
-                                </div>
-                                        <div class="caja-presentacion">
-                                  <section id="Bienvenidos">
-                                      <div>    
-                                          <h1>Bienvenidos a mi PortFolio🚀</h1>
-                                       <p   class="caja-presentacion">
-                                          <p>  Me llamo Joel Roman Urbanski </p>
-                                          <p>  Soy Tecnico en Informatica   </p>
-                                          <p>  Futuro tecnico Programador   </p>    
-                            </div>
-                                   
-
-                                  </section>
-                                        </div>
-                                    </div>
-                                </div>
-                        </div>
-
-                    </section>
-
-                </table>
                 <!--------------------------------------------------------------->
-                <div>
-                     <div class="uno" >
-                        <div class="caja-presentacion" >
-                            <section id="perfil Profesional">
-                                <h2>perfil Profesional</h2>
-                                <p .tres >Cuento con experiencia en soporte tecnico de primer nivel,
+                <section id="Perfil" class="glass-card full-section">
+                                <h2>Perfil Profesional</h2>
+                                
+                             <div class="texto-seccion">
+
+                                 <p .tres >Cuento con experiencia en soporte tecnico de primer nivel,
                                 armado y reparacion de equipos, instalacion de sistemas operativos (Windows 10/11)
                                 ,configuracion de redes y soporte a usuarios en entornos academicos y corporativos.
                                 Manejo de Microsoft Office 365, herramientas de tickets (GLPI) 
                                 y videoconferencias (Zoom, Teams, YouTube). Perfil proactivo,
                                 orientado a la resolucion de problemas y con buenas habilidades de comunicacion.
                                 </p>
-
+                            </div>
                             </section>
                             
 
-                        </div>
-                    </div>  
-                                    
-                    
-                 <!-- Información general -->
-                  <div class="uno">
-                      <div class="caja-presentacion" >
-                         <section id="Experiencia Laboral">
- <!--------------------------------------------------------------------->  
-                            <h2>Experiencia Laboral</h2>
-                           <h3>Soporte IT - UTN General Pacheco</h3>
-                            <p>• Agosto 2022 – Actualidad</p>
-                            <p>• Gestion de tickets con GLPI y documentacion de procesos basicos.</p>
-                            <p>• Armado, reparacion y mantenimiento de PC’s, notebooks e impresoras.</p>
-                            <p>• Instalacion y soporte de Windows 10/11 y Microsoft Office 365.</p>
-                            <p>• Configuracion de redes (cableado, routers, extensores).</p>
-                            <p>• Atencion a usuarios y soporte en videoconferencias (Zoom, Teams, YouTube).</p>
-                            <p>• Capacitacion de Nuevos becados.</p>
-                            <p>• Monitoreo de alertas de seguridad en Kaspersky (nivel usuario, no administracion interna).</p>
-                            <p>• Control De Stock de Hardware.</p>
-                            <p>• Documentacion de instalacion, configuracion de programas y Windows.</p>
-                            <p>• Mantenimiento e instalacion de computadoras de laboratorios de informatica.</p></p>
-                             <!--------------------------------------------------------------------->                        
-                            <h2>Soporte Técnico – Informática Urbañski (emprendimiento propio)</h2>
-                            <p> 2020 – Actualidad</p>
-                            <p> •Soporte tecnico a usuarios (presencial y remoto).</p>
-                            <p> •Instalacion de sistemas operativos y software segun requerimientos.</p>
-                            <p> •Armado, reparacion y configuracion de PCs, notebooks.</p>
-                            <p> •Configuracion de redes LAN y dispositivos de red.</p>
-                <div>
-                                         <label for="">etiqueta 2 </label>
-
-                    </section>
-                                              
+              <!--------------------------------------------------------------->
      
-                     </div>
+                    
+<section id="Experiencia" class="glass-card full-section">
+    <h2>Experiencia Laboral</h2>
 
-                  </div>
+        <div class="texto-seccion">
+
+        <h3>Soporte IT – UTN General Pacheco (2022 – Actualidad)</h3>
+        <ul>
+            <li>Gestión de tickets GLPI</li>
+            <li>Instalación y soporte en Windows 10/11</li>
+            <li>Configuración de redes</li>
+            <li>Armado y reparación de PCs y notebooks</li>
+            <li>Capacitación de nuevos becados</li>
+        </ul>
+    </div>
+
+        <div class="texto-seccion">
+
+        <h3>Soporte Técnico – Informática Urbañski (2020 – Actualidad)</h3>
+        <ul>
+            <li>Soporte remoto y presencial</li>
+            <li>Instalación de sistemas operativos</li>
+            <li>Armado y configuración de PCs</li>
+            <li>Redes LAN</li>
+        </ul>
+    </div>
+</section>
+
 
   <!--------------------------------------------------------------->                
-                <div class="uno">
-                    <div class="caja-presentacion">
-                       <section id="FormaciónAcadémica">
-                        <h2>  Formación Académica</h2>
-                        <p>•Tecnicatura Universitaria en Programacion – UTN General Pacheco | 2022 – Actualidad </p>
-                        <p>(Lenguajes: <img width="60ppx" height="30ppx" src="https://imgs.search.brave.com/Sz0kUVBAGhYNd04SuHP6o0dvfgVMpTBqz6DuyqIbI8Q/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9hY2Fk/ZW1pYWVscm9zYXJp/by53b3JkcHJlc3Mu/Y29tL3dwLWNvbnRl/bnQvdXBsb2Fkcy8y/MDE3LzA2L3BzZWlu/dC1sb2dvLnBuZz93/PTIwMA"alt="Pseint"> <img width="60ppx" height="30ppx" src="https://imgs.search.brave.com/jy0E4HydSVK-q6mus1Z0DrfYPsN5TXKMaZ6mggmuW00/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJjYXZlLmNv/bS93cC93cDQwMDk5/MTQucG5n" alt="c++"> )</p>
-                        <p>•Tecnico en Informatica – Escuela Tecnica Secundaria de Berisso | Finalizado en 2019</p>
-                        <p> (Lenguajes: <img width="60ppx" height="60ppx" src="https://imgs.search.brave.com/mQB2QdpGE87vxZ9StSOKDlZpZTmOtPjZLwrGPCNhrjQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/dmVjdG9ybG9nby56/b25lL2xvZ29zL3B5/dGhvbi9weXRob24t/dmVydGljYWwuc3Zn"alt="Python">, <img width="60ppx" height="60ppx" src="https://imgs.search.brave.com/Ap5KQ0GtjIqQZTMlo1SOnAUf2Ie54L1bG6ysJ2T9Obk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4t/aWNvbnMtcG5nLmZs/YXRpY29uLmNvbS8x/MjgvMjMwNi8yMzA2/MDk4LnBuZw"alt="HTML">, <img width="60ppx" height="60ppx" src="https://imgs.search.brave.com/I9Vliwj8ucgPJqw91Yd_Y1vPPgdoB9yfpkBMEwlDu94/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4t/aWNvbnMtcG5nLmZs/YXRpY29uLmNvbS8x/MjgvMTg0MDUvMTg0/MDU2NDMucG5n"alt="MySQL">, <img width="60ppx" height="60ppx" src="https://imgs.search.brave.com/9L8Zi0cUyU-Z_ZIWQuP_l3WDBpVn9qCHHWsc5gYpbLM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/dmVjdG9yc3RvY2su/Y29tL2kvcHJldmll/dy0xeC83Mi8xNC9z/cWwtdmVjdG9yLTQ2/NTY3MjE0LmpwZw"alt="SQL">, <img width="60ppx" height="30ppx" src="https://imgs.search.brave.com/Sz0kUVBAGhYNd04SuHP6o0dvfgVMpTBqz6DuyqIbI8Q/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9hY2Fk/ZW1pYWVscm9zYXJp/by53b3JkcHJlc3Mu/Y29tL3dwLWNvbnRl/bnQvdXBsb2Fkcy8y/MDE3LzA2L3BzZWlu/dC1sb2dvLnBuZz93/PTIwMA"alt="Pseint"> ) </p>
-                        <p>•Pasantías en E-Basura UNLP (robotica en escuelas) – Abril a Noviembre 2019. </p>
-                        <p>•Curso de armado y reparacion de PC + redes – Instituto F5- La Plata , 2017.</p>
-                       </section>
-                    </div>
-                                                         
-                </div>
+          <section id="Formacion" class="glass-card full-section">
+    <h2>Formación Académica</h2>
+    <div class="texto-seccion">
+<ul>
+        <li>TUP – UTN FRGP (2022 – Actualidad)</li>
+        <li>Técnico en Informática – EEST Berisso (2019)</li>
+        <li>Pasantías en Robótica – E-Basura UNLP (2019)</li>
+    </ul>
+        
+    </div>
+    
+</section>
+
 <!--------------------------------------------------------------->                
-             <div class="uno">
-                 <div class="caja-presentacion">
-                 <div class="Proyectos">
+           <section id="Proyectos" class="glass-card full-section">
+    <h2>Proyectos</h2>
 
-                     <section id="Proyectos">
-                         <h2>  Proyectos </h2>
-                         <p>  TP GREED      Programacion 1(UTN frgp) </p>
-                         <p>  TP goleadores Programacion 2(UTN frgp) </p>
-                     </section>
+    <div class="carousel">
+        <button class="carousel-btn prev">&#10094;</button>
 
-                 </div>
+        <div class="carousel-track">
+            <img src="filtrofordtransit1998(1).jpg" alt="Proyecto 1"class="carousel-img">
+            <img src="filtrofordtransit1998(2).jpg" alt="Proyecto 2"class="carousel-img">
+            <img src="filtrofordtransit1998(3).jpg" alt="Proyecto 3"class="carousel-img">
+            <img src="filtrofordtransit1998(4).jpg" alt="Proyecto 4"class="carousel-img">
+            <img src="filtrofordtransit1998(5).jpg" alt="Proyecto 5"class="carousel-img">
+            <img src="filtrofordtransit1998(6).jpg" alt="Proyecto 6"class="carousel-img">
+            <img src="filtrofordtransit1998(7).jpg" alt="Proyecto 7"class="carousel-img">
+            <img src="filtrofordtransit1998(8).jpg" alt="Proyecto 8"class="carousel-img" >
+            <img src="filtrofordtransit1998(9).jpg" alt="Proyecto 9"class="carousel-img">
+        
+
+        </div>
+            <button class="carousel-btn next">&#10095;</button>
 
 
-                     </div>
-                 </div>
+    </div>
+</section>
+
 <!--------------------------------------------------------------->                 
-             <div class="uno">
-                 <div class="caja-presentacion">
-                        <section id="Redes">
-                            <h2 center="mid">  Redes </h2>
+         <section id="Redes" class="glass-card redes-card">
+    <h2>Redes</h2>
+ 
+    <div class="redes-contenedor">
                             <a href="https://www.linkedin.com/in/joel-roman-urba%C3%B1ski-39a7b41a2/" target="_blank">
-  <img src="https://imgs.search.brave.com/ksj9IG8zQoXm_KCmM9MpcoPVoRYPCOqEwqUyYdC1Z3E/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4x/Lmljb25maW5kZXIu/Y29tL2RhdGEvaWNv/bnMvaGV4LWljby8x/MjgvbGlua2VkaW4u/cG5n" alt="Mi GitHub" width="100">
+  <img src="https://imgs.search.brave.com/ksj9IG8zQoXm_KCmM9MpcoPVoRYPCOqEwqUyYdC1Z3E/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4x/Lmljb25maW5kZXIu/Y29tL2RhdGEvaWNv/bnMvaGV4LWljby8x/MjgvbGlua2VkaW4u/cG5n" alt="Mi GitHub" width="100"class="icono-red">
 </a>
 <!--------------------------------------------------------------->
  <a href="https://www.instagram.com/r.ubsso/" target="_blank">
-  <img src="https://imgs.search.brave.com/LDSrUq-XZMltrCxfVsc1XAmSqSG_c6J1JW-0ErfJCD4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy9l/L2U3L0luc3RhZ3Jh/bV9sb2dvXzIwMTYu/c3Zn" alt="Mi GitHub" width="100">
+  <img src="https://imgs.search.brave.com/LDSrUq-XZMltrCxfVsc1XAmSqSG_c6J1JW-0ErfJCD4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy9l/L2U3L0luc3RhZ3Jh/bV9sb2dvXzIwMTYu/c3Zn" alt="Mi GitHub" width="100"class="icono-red">
 </a>     
 <a href="https://www.youtube.com/@informaticaurbanski" target="_blank">
-  <img src="https://imgs.search.brave.com/er55Vbfs7K9RjKggwtMLPlvn9_FNGCbDADmhvKIfS3g/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy9k/L2QxL1lvdXR1YmUt/dmFyaWF0aW9uLnBu/Zw" alt="Mi GitHub" width="100">
+  <img src="https://imgs.search.brave.com/er55Vbfs7K9RjKggwtMLPlvn9_FNGCbDADmhvKIfS3g/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy9k/L2QxL1lvdXR1YmUt/dmFyaWF0aW9uLnBu/Zw" alt="Mi GitHub" width="100"class="icono-red">
 </a> 
 
+ 
 
+    </div>
+    
                         </section>
 
-
-                     </div>
-                 </div>
+ 
  <!--------------------------------------------------------------->                
-                 <div class="uno">
-                        <div class="caja-presentacion" >
-<div class="content">
+                
 
-    <section id="contactame">
-        <h2> Formulario de Contacto</h2>
-              <p>   <label for="">Nombre </label></p>
-              <p>   <input type="text"></p>
-              <p>   <label for="">Apellido </label></p>
-              <p>   <input type="text"></p>
-              <p>   <label for="">Razon por la cual me contacta </label></p>
-              <p>   <input type="text"> </p>
-              <p>   <label for="">email </label></p>
-              <p>   <input type="text"></p>
-              <button type="submit">Enviar</button>
+       <section id="Contacto" class="glass-card form-card">
 
-    </section>
+    <h2>Formulario de Contacto</h2>
+    <form action="https://formspree.io/f/xnnegyab" method="POST" class="formulario">
 
+    <div class="form-izquierda">
+
+        <label>Nombre</label>
+        <input type="text" name="Nombre" required>
+
+        <label>Apellido</label>
+        <input type="text" name="Apellido" required>
+
+        <label>Email</label>
+        <input type="email" name="Email" required>
+
+    </div>
+
+    <div class="form-derecha">
+
+        <label>Motivo</label>
+        <textarea name="Motivo" rows="12" maxlength="5000" required></textarea>
+
+    </div>
+
+<div class="form-boton">
+    <button type="submit" class="btn-enviar">Enviar</button>
 </div>
 
-                        </div>
+</form>
 
 
-                <div>
-                                                         <label for="">etiqueta 3 </label>
-                </div>
-             
-
-                 </div>
-
-
-
-
+ <!--------------------------------------------------------------->                
 
             </body>
         </head>  
